@@ -94,10 +94,10 @@ export class Axel {
         });
         i = 0;
 
-        toWrite = toWrite.concat('fn|\n')
+        toWrite = toWrite.concat('fn|\n');
         this.funcNames.forEach((func) => {
-            toWrite = toWrite.concat(``)
-            i++
+            toWrite = toWrite.concat(`${func}: (${this.funcInVal[i]})->(${this.funcOutVal[i]})\n`);
+            i++;
         });
 
 
