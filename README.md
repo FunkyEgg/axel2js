@@ -12,7 +12,7 @@ The syntax for axel code is fairly simple so i decided to stick with that for ax
 All axel projects start off with the bare bones.
 ```js
 const { Axel } = require('axel2js');
-const ax = new Axel(false);
+const ax = new Axel(true);
 
 ax.generate();
 ```

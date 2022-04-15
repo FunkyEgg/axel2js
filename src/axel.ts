@@ -110,12 +110,17 @@ export class Axel {
 
 
         toWrite = toWrite.concat('}');
-        if (!fs.existsSync('./out')) { fs.mkdirSync('./out') }
-        fs.writeFile(`./out/${fileName}.axel`, toWrite, (err) => {
-            if(err) {
-                return console.log(err);
-            }
-            console.log(`File written to ./out/${fileName}.axel`);
-        });         
+
+        if (this.outputFile) {
+            if (!fs.existsSync('./out')) { fs.mkdirSync('./out') }
+            fs.writeFile(`./out/${fileName}.axel`, toWrite, (err) => {
+                if(err) {
+                    return console.log(err);
+                }
+                console.log(`File written to ./out/${fileName}.axel`);
+            });   
+        } else {
+            console.log(`${toWrite}`);
+        }
     }
 }
