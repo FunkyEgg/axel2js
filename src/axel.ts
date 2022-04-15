@@ -8,6 +8,10 @@ export class Axel {
     funcInVal: string[][];
     funcOutVal: string[][];
 
+    /**
+     * The base axel class
+     * @param outputFile Whether to ouput a file or a string
+     */
     constructor(outputFile: boolean) {
         this.outputFile = outputFile;
         this.valueNames = [];
@@ -89,7 +93,11 @@ export class Axel {
 
         let i: number = 0;
         this.valueNames.forEach((name) => {
-            toWrite = toWrite.concat(`${name}: ${this.values[i]}\n`);
+            if (this.values[i] === Number || this.values[i] === Boolean) {
+                toWrite = toWrite.concat(`${name}: ${this.values[i]}\n`);
+            } else {
+                toWrite = toWrite.concat(`${name}: "${this.values[i]}"\n`);
+            }
             i++;
         });
         i = 0;

@@ -1,6 +1,6 @@
 {
-  "name": "axel.js",
-  "version": "0.0.0",
+  "name": "axel2js",
+  "version": "1.0.2",
   "description": "A axel code generator for the able os api",
   "main": "build/main.js",
   "scripts": {
