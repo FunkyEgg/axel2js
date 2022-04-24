@@ -1,4 +1,4 @@
-# axel2js
+# axel2js ![npm](https://img.shields.io/npm/dw/axel2js)
 A tool for converting js code to [axel api nodes](https://git.ablecorp.us/able/aos_userland/src/branch/master/axel) for the [able os](https://git.ablecorp.us/able/ableos) api.
 
 ## Credits
